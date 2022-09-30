@@ -35,6 +35,15 @@ btnSort.addEventListener("click", function() {
   }
 });
 
+//Ponemos como límites mínimo y máximo al input para no crear demasiadas cartas.
+cardQuantity.addEventListener("input", function() {
+  if (parseInt(cardQuantity.value) < 1) {
+    cardQuantity.value = "1";
+  } else if (parseInt(cardQuantity.value) > 20) {
+    cardQuantity.value = "21";
+  }
+});
+
 //Función que crea una carta aleatoria dependiendo de una estructura HTML dada.
 function newCard() {
   let cardNumber = numbers[Math.floor(Math.random() * numbers.length)];
