@@ -35,9 +35,9 @@ btnSort.addEventListener("click", function() {
   }
 });
 
-//Ponemos como límites mínimo y máximo al input para no crear demasiadas cartas.
+//Ponemos como límites mínimo y máximo al input para no crear demasiadas cartas y si el valor es nulo.
 cardQuantity.addEventListener("input", function() {
-  if (parseInt(cardQuantity.value) < 1) {
+  if (parseInt(cardQuantity.value) < 1 || cardQuantity.value == "") {
     cardQuantity.value = "1";
   } else if (parseInt(cardQuantity.value) > 20) {
     cardQuantity.value = "21";
