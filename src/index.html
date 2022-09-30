@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,18 +12,48 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body class="h-100">
+    <nav class="navbar bg-light mb-5">
+      <div class="container-fluid justify-content-center">
+        <span class="navbar-brand mb-0 h1">Bubble Sorting Cards</span>
+      </div>
+    </nav>
+    <div
+      id="managementContainer"
+      class="container-fluid d-flex justify-content-center align-items-center"
+    >
+      <div class="col-2 mx-3">
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Cantidad</div>
+          </div>
+          <input
+            type="number"
+            class="form-control"
+            id="cardQuantity"
+            value="1"
+            min="1"
+          />
+        </div>
+      </div>
+      <div class="col-1">
+        <div class="input-group mb-2">
+          <button id="generateCards" type="button" class="btn btn-dark">
+            Generar
+          </button>
+        </div>
+      </div>
+      <div class="col-1">
+        <div class="input-group mb-2">
+          <button id="sortCards" type="button" class="btn btn-dark">
+            Ordenar
+          </button>
+        </div>
       </div>
     </div>
+    <div
+      id="cardsContainer"
+      class="container-fluid d-flex justify-content-center align-items-center flex-wrap"
+    ></div>
   </body>
 </html>
